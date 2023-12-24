@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>CSS Grid Layout</title>
+</head>
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+height:100vh;
+width:100vw;
+display:grid;
+grid-template-areas:
+'nav nav nav'
+'head head head'
+'side main main'
+'asi1 asi2 asi3'
+'foo foo foo';
+grid-template-rows:50px  100px 1fr  170px 50px;
+grid-template-columns:1fr 1fr  1fr;
+}
+nav{
+grid-area:nav;
+background-color:lightyellow;
+}
+header{
+grid-area:head;
+background-color:pink;
+}
+main{
+grid-area:side;
+background-color:lavender;
+}
+#con{
+grid-area:main;
+background-color:bisque;
+}
+#asid1{
+grid-area:asi1;
+background-color:#E1F8DC;
+padding:20px;
+border:2px solid black;
+}
+#asid2{
+grid-area:asi2;
+background-color:#F2BBD0;
+}
+#asid3{
+grid-area:asi3;
+background-color:#F8ECE8;
+}
+footer{
+grid-area:foo;
+background-color:lightgrey;
+}
+nav,header,main,.con,#asid1,#asid2,#asid3,footer{
+padding:20px;
+border:1px solid black;
+}
+
+
+</style>
+<body>
+<nav>Navigation Bar</nav>
+<header>Header</header>
+<main>Sidebar</main>
+<main id="con">Main Content</main>
+<aside id="asid1" >Aside 1</aside>
+<aside id="asid2">Aside 2</aside>
+<aside id="asid3">Aside 3</aside>
+<footer>Footer</footer>
+</body>
+</html>
